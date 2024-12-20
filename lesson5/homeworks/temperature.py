@@ -1,14 +1,15 @@
-def convert_cel_to_far(C: float):
-    F = C*1.8+32
-    return F
+def convert_cel_to_far(celsius):
+    """Convert Celsius to Fahrenheit."""
+    return celsius * 9 / 5 + 32
 
-def convert_far_to_cel(F: float):
-    C = (F-32)*5/9
-    return C
+def convert_far_to_cel(fahrenheit):
+    """Convert Fahrenheit to Celsius."""
+    return (fahrenheit - 32) * 5 / 9
 
+fahrenheit = float(input("Enter a temperature in degrees Fahrenheit: "))
+celsius = convert_far_to_cel(fahrenheit)
+print(f"{fahrenheit}°F is equal to {round(celsius, 2)}°C")
 
-
-print(convert_cel_to_far(15))
-print(convert_far_to_cel(59))
-    
-    
+celsius = float(input("Enter a temperature in degrees Celsius: "))
+fahrenheit = convert_cel_to_far(celsius)
+print(f"{celsius}°C is equal to {round(fahrenheit, 2)}°F")
